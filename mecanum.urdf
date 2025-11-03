@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<robot name="my_mecanum_bot">
+
+  <link name="base_link">
+    
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/> <mass value="5.0"/>
+      <inertia ixx="0.01997" ixy="0.0" ixz="0.0"
+               iyy="0.01534" iyz="0.0"
+               izz="0.02871"/>
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/chasis_collision.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/chasis_visual.stl"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="wheel_fl_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/> 
+      <mass value="0.1"/>
+      <inertia ixx="0.0000175" ixy="0.0" ixz="0.0"
+               iyy="0.00002"   iyz="0.0"
+               izz="0.0000175"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/> 
+      <geometry>
+        <mesh filename="meshes/wheel_collision.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+      <geometry>
+        <mesh filename="meshes/wheel_visual.stl"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="wheel_fl_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="wheel_fl_link"/>
+    <origin xyz="0.085 0.1 0.0145" rpy="0 0 0"/> <axis xyz="0 1 0"/>
+    <limit effort="10.0" velocity="100.0"/>
+  </joint>
+
+  <link name="wheel_fr_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/> 
+      <mass value="0.1"/>
+      <inertia ixx="0.0000175" ixy="0.0" ixz="0.0"
+               iyy="0.00002"   iyz="0.0"
+               izz="0.0000175"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/> 
+      <geometry>
+        <mesh filename="meshes/wheel_collision.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+      <geometry>
+        <mesh filename="meshes/wheel_visual.stl"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="wheel_fr_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="wheel_fr_link"/>
+    <origin xyz="0.085 -0.1 0.0145" rpy="0 0 0"/> <axis xyz="0 1 0"/>
+    <limit effort="10.0" velocity="100.0"/>
+  </joint>
+
+  <link name="wheel_rl_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/> 
+      <mass value="0.1"/>
+      <inertia ixx="0.0000175" ixy="0.0" ixz="0.0"
+               iyy="0.00002"   iyz="0.0"
+               izz="0.0000175"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/> 
+      <geometry>
+        <mesh filename="meshes/wheel_collision.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+      <geometry>
+        <mesh filename="meshes/wheel_visual.stl"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="wheel_rl_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="wheel_rl_link"/>
+    <origin xyz="-0.085 0.1 0.0145" rpy="0 0 0"/> <axis xyz="0 1 0"/>
+    <limit effort="10.0" velocity="100.0"/>
+  </joint>
+
+  <link name="wheel_rr_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/> 
+      <mass value="0.1"/>
+      <inertia ixx="0.0000175" ixy="0.0" ixz="0.0"
+               iyy="0.00002"   iyz="0.0"
+               izz="0.0000175"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/> 
+      <geometry>
+        <mesh filename="meshes/wheel_collision.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+      <geometry>
+        <mesh filename="meshes/wheel_visual.stl"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="wheel_rr_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="wheel_rr_link"/>
+    <origin xyz="-0.085 -0.1 0.0145" rpy="0 0 0"/> <axis xyz="0 1 0"/>
+    <limit effort="10.0" velocity="100.0"/>
+  </joint>
+
+</robot>
