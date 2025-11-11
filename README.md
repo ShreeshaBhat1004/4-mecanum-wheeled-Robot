@@ -1,4 +1,4 @@
-**Run the following code to view Robot**
+**Run the following code snippet to visualize Robot**
 ```bash
 git clone https://github.com/ShreeshaBhat1004/4-mecanum-wheeled-Robot
 cd 4-mecanum-wheeled-Robot
