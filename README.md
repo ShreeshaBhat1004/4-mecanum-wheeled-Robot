@@ -5,6 +5,7 @@ cd 4-mecanum-wheeled-Robot
 pip install pybullet
 python view_robot.py
 ```
-[![](https://github.com/ShreeshaBhat1004/4-mecanum-wheeled-Robot/blob/main/Screenshot%20from%202025-11-11%2021-08-36.png)](https://github.com/ShreeshaBhat1004/4-mecanum-wheeled-Robot/blob/main/Screencast%20from%202025-11-11%2021-03-53.mp4)
 
+
+https://github.com/user-attachments/assets/4cc875da-f6fd-4265-bd06-8d813296683b
 
